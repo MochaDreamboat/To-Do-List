@@ -13,6 +13,31 @@
         <h1>To - Do</h1>
         <button id="new-task">New Task</button>
     </header>
+    <form>
+        <label for="task">Task:</label>
+        <input type="text" name="task">
+        <br>
+        <label for="description">Description:</label>
+        <br>
+        <textarea name="description"></textarea>
+        <br>
+        <label for="due">Due:</label>
+        <input type="date" name="due">
+        <fieldset id="priority">
+            <legend>Priority</legend>
+            <input type="radio" name="priority" value="1">
+            <label for="priority">1</label>
+            <input type="radio" name="priority" value="2">
+            <label for="priority">2</label>
+            <input type="radio" name="priority" value="3">
+            <label for="priority">3</label>
+            <input type="radio" name="priority" value="4">
+            <label for="priority">4</label>
+            <input type="radio" name="priority" value="5">
+            <label for="priority">5</label>
+        </fieldset>
+        <button type="submit">Submit</button>
+    </form>
     <main>
         <content id="tasks">
             <div class="today-tasks">
