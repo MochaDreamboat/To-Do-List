@@ -1,3 +1,96 @@
-h1 {
-    color: blue;
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+
+* {
+    display: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Playfair Display', serif;
 }
+
+
+:root {
+    --primary-color: #FB8122;
+    --secondary-color: #1D2228;
+    --tertiary-color: #E1E2E2;  
+}
+
+body {
+    background-color: var(--secondary-color);
+    color: var(--tertiary-color);
+}
+
+header {
+    display: inline-block;
+    position: relative;
+    height: auto;
+    width: auto;
+    margin-top: 5vh;
+    margin-left: 5vw;
+}
+
+nav {
+    position: absolute;
+    top: 0;
+    right: 0;
+    line-height: 2em;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+
+#new-task {
+    display: block;
+    margin: 15px auto;
+    background-color: var(--primary-color);
+    height: 2em;
+    width: 6em;
+    border-radius: 5px;
+    border: none;
+}
+
+ul {
+    list-style-type: none;
+}
+
+main {
+    display: relative;
+    border: solid red;
+}
+
+#tasks {
+    display: absolute;
+    margin: 0 auto;
+    width: 50%;
+    border: solid blue;
+    display: flex;
+    flex-direction: column;
+}
+
+.task {
+    padding: 0 2em;
+    position: relative;
+    border: solid green;
+    width: 100%;
+    display: inline-block;
+}
+
+.priority {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 50px;
+    width: 50px;
+    background-color: yellow;
+    border-radius: 5px;
+}
+.bottom {
+    padding-top: 3em;
+    display: flex;
+    justify-content: space-between;
+}
+
+
