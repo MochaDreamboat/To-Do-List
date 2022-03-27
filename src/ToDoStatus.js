@@ -1,0 +1,1 @@
+// Functions that can Read/Update/Delete task DOM/object.
