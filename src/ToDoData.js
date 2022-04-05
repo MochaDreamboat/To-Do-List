@@ -4,10 +4,6 @@
 
 export { taskGenerator, saveTask };
 
-var taskList = [];
-
-const myName = 'Jerold';
-
 const taskGenerator = (task, description) => {
     return {task, description};
 };
