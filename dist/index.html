@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To-Do-List</title>
     <link rel="stylesheet" href="../style.css">
-    <script src="../src/index.js" defer></script>
+    <script src="main.js" defer></script>
 </head>
 <body>
     <header>
@@ -15,14 +15,14 @@
     </header>
     <form>
         <label for="task">Task:</label>
-        <input type="text" name="task">
+        <input type="text" id ="task" name="task">
         <br>
         <label for="description">Description:</label>
         <br>
-        <textarea name="description"></textarea>
+        <textarea id ="description" name="description"></textarea>
         <br>
         <label for="due">Due:</label>
-        <input type="date" name="due">
+        <input type="date" id="due" name="due">
         <fieldset id="priority">
             <legend>Priority</legend>
             <input type="radio" name="priority" value="1">
@@ -36,7 +36,7 @@
             <input type="radio" name="priority" value="5">
             <label for="priority">5</label>
         </fieldset>
-        <button type="submit">Submit</button>
+        <button type="submit" id="submit">Submit</button>
     </form>
     <main>
         <content id="tasks">
@@ -49,8 +49,8 @@
                     <img class="priority">
                     <div class="bottom">
                         <div class="buttons">
-                            <button class="complete">Check</button>
-                            <button class="delete">Delete</button>
+                            <button class="complete">&#10003;</button>
+                            <button class="delete">X</button>
                         </div>
                         <p class="due-date">DUE: 04/01</p>
                     </div>
@@ -61,10 +61,10 @@
         </content>
         <nav id="sidebar">
             <ul>
-                <p>Groups</p>
-                <li>Today</li>
-                <li>Tomorrow</li>
-                <li>Upcoming</li>
+                <p>Projects</p>
+                <li>Work</li>
+                <li>Fitness</li>
+                <li>Learning</li>
             </ul>
         </nav>
     </main>
