@@ -10,7 +10,7 @@ export {toDoInterface};
 
 const toDoInterface = (() => {
 
-    const generateTask = function (taskObject) {
+    const generateTask = function(taskObject) {
 
         let task = document.createElement('article');
         task.classList.add('task');
@@ -21,12 +21,12 @@ const toDoInterface = (() => {
 
         let controls = generateControls(taskObject.objectID);
         task.appendChild(controls);
-        
+
         console.log(task);
         return task;
     };
 
-    const generateDescriptors = function (task, description) {
+    const generateDescriptors = function(task, description) {
 
         let descriptors = document.createElement('div');
         descriptors.classList.add('descriptors');
@@ -42,12 +42,13 @@ const toDoInterface = (() => {
         return descriptors;
     }
 
-    const generateControls = function (id) {
+    const generateControls = function(id) {
+
         let todayTasks = document.querySelector('.today-tasks');
 
         let controls = document.createElement('div');
         controls.classList.add('bottom');
-        
+
         let buttons = document.createElement('div');
         buttons.classList.add('buttons');
 
@@ -66,11 +67,11 @@ const toDoInterface = (() => {
             deleteTask(id);
         });
 
-        function deleteTask (id) {
+        function deleteTask(id) {
             let removedTask = document.getElementById(id);
             todayTasks.removeChild(removedTask);
         }
-        
+
         // Replace with Date object association (using date-fns)
         let due = document.createElement('p');
         due.textContent = 'DUE: 04/01';
@@ -79,7 +80,9 @@ const toDoInterface = (() => {
         return controls
     }
 
-    return {generateTask};
+    return {
+        generateTask
+    };
 })();
 
 
