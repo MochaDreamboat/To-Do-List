@@ -50,6 +50,7 @@ footer {
     width: 6em;
     border-radius: 5px;
     border: none;
+    cursor: pointer;
 }
 
 ul {
@@ -102,6 +103,10 @@ main {
     align-items: center;
 }
 
+.buttons {
+    display: flex;
+    gap: 5px;
+}
 .complete, .delete {  
     width: 2rem;
     height: 2rem;
