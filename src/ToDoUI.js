@@ -19,7 +19,7 @@ const toDoInterface = (() => {
         let descriptors = generateDescriptors(taskObject.task, taskObject.description);
         task.appendChild(descriptors);
 
-        let controls = generateControls();
+        let controls = generateControls(taskObject.objectID);
         task.appendChild(controls);
         
         console.log(task);
@@ -42,7 +42,8 @@ const toDoInterface = (() => {
         return descriptors;
     }
 
-    const generateControls = function () {
+    const generateControls = function (id) {
+        let todayTasks = document.querySelector('.today-tasks');
 
         let controls = document.createElement('div');
         controls.classList.add('bottom');
@@ -59,8 +60,16 @@ const toDoInterface = (() => {
         deleteButton.classList.add('delete');
         deleteButton.innerHTML = 'X';
         buttons.appendChild(deleteButton);
-
         controls.appendChild(buttons);
+
+        deleteButton.addEventListener('click', () => {
+            deleteTask(id);
+        });
+
+        function deleteTask (id) {
+            let removedTask = document.getElementById(id);
+            todayTasks.removeChild(removedTask);
+        }
         
         // Replace with Date object association (using date-fns)
         let due = document.createElement('p');
