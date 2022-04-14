@@ -26,7 +26,7 @@ const toDoInterface = (() => {
         return task;
     };
 
-    const generateDescriptors = function(task, description) {
+    const generateDescriptors = function(task, description, due, priority) {
 
         let descriptors = document.createElement('div');
         descriptors.classList.add('descriptors');
@@ -72,7 +72,7 @@ const toDoInterface = (() => {
             todayTasks.removeChild(removedTask);
         }
 
-        // Replace with Date object association (using date-fns)
+        // Replace with Date object association.
         let due = document.createElement('p');
         due.textContent = 'DUE: 04/01';
 

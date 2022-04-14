@@ -2,25 +2,25 @@
 // Takes form submission and implements inputs to appropriate task object properties.
 // Provides return of object to DOM element creator (ToDoUI.js)
 
-export { taskGenerator, saveTask };
+export { taskGenerator, taskList };
 
-const taskGenerator = (task, description) => {
+const taskGenerator = (task, description, due, priority) => {
     let objectID = idGen();
     
     // Generates random ID for usage in task's DOM element.
     function idGen() {
+        
         let S4 = function () {
             return (((1+Math.random())*0x10000)|0).toString(16).substring(1);
         };
         return (S4()+S4()+"-"+S4()+"-"+S4()+"-"+S4()+"-"+S4()+S4()+S4());
     }
 
-    return {task, description, objectID};
+    return {task, description, due, priority, objectID};
 };
 
+const taskList = {
 
-const saveTask = function (task) {
-    taskList.push(task);
 };
 
 // Make Projects library a module????
