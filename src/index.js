@@ -1,7 +1,12 @@
 // Switch script source back to main.js for distribution.
+import {
+    toDoInterface
+} from "./ToDoUI.js";
 
-import {toDoInterface} from "./ToDoUI.js";
-import {taskGenerator, taskList} from "./ToDoData.js";
+import {
+    taskGenerator,
+    taskList
+} from "./ToDoData.js";
 
 const newTaskButton = document.getElementById('new-task');
 const form = document.querySelector('form');
